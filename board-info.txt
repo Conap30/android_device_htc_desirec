@@ -1,0 +1,3 @@
+require board=desirec
+reject serialno=HT7*|HT80*|HT81*
+require version-cpld=4
