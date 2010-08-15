@@ -46,7 +46,8 @@ WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
-
+# Use HTC USB Function Switch to enable tethering via USB
+BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 
