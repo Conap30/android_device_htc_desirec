@@ -2,5 +2,5 @@
 <CallPromptId Id="0" CallPromptText="CallPromptId0"/>
 <CallPromptId Id="1" CallPromptText="CallPromptId1"/>
 <CallPromptId Id="2" CallPromptText="CallPromptId2"/>
-<EriInfo RoamingIndicator="128" IconIndex="1" IconMode="0" EriText="CELB Froyo" CallPromptId="0" AlertId="0"/>
+<EriInfo RoamingIndicator="128" IconIndex="1" IconMode="0" EriText="Verizon Wireless" CallPromptId="0" AlertId="0"/>
 </EriFile>
