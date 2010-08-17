@@ -46,6 +46,7 @@ BOARD_USERDATAIMAGE_MAX_SIZE := 78381056
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CAMERA_LIBRARIES := libcameraservice libcamera
+BOARD_GPS_LIBRARIES := libgps
 
 BOARD_KERNEL_BASE := 0x11200000
 

@@ -68,7 +68,7 @@ EOF
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=\$(TOP)/device/htc/desirec/prelink-linux-arm-desirec.map
 
-BOARD_GPS_LIBRARIES := libgps librpc
+BOARD_GPS_LIBRARIES := libgps
 
 BOARD_USES_OLD_CAMERA_HACK := true
 USE_CAMERA_STUB := false
