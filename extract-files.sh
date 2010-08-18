@@ -45,6 +45,7 @@ adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/htc/$DEVICE/proprieta
 adb pull /system/lib/libpvasflocalpb.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libspeech.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLES_qcom.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/hw/sensors.desirec.so ../../../vendor/htc/$DEVICE/proprietary
 
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
@@ -97,6 +98,8 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so
+vendor/htc/__DEVICE__/proprietary/sensors.desirec.so:system/lib/hw/sensors.desirec.so
+
 
 EOF
 
