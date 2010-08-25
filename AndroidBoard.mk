@@ -1,4 +1,4 @@
-# Copyright (C) 2007 The Android Open Source Project
+# Copyright (C) 2009 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#
+# AndroidBoard.mk is a legacy mechanism to deal with a few
+# edge-cases that can't be managed otherwise. No new rules
+# should be added to this file.
+#
+
 LOCAL_PATH := $(call my-dir)
 
-$(call add-radio-file,recovery/images/firmware_install.565)
+# Least specific includes go first, so that they can get
+# overridden further down
+include $(CLEAR_VARS)
 
-file := $(TARGET_OUT_KEYLAYOUT)/desirec-keypad.kl
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/desirec-keypad.kl | $(ACP)
-	$(transform-prebuilt-to-target)
-
-file := $(TARGET_ROOT_OUT)/init.desirec.rc
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.desirec.rc | $(ACP)
-	$(transform-prebuilt-to-target)
-
-include device/htc/desirec/AndroidBoardCommon.mk
-
+# include the non-open-source counterpart to this file
 -include vendor/htc/desirec/AndroidBoardVendor.mk

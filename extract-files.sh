@@ -31,7 +31,6 @@ adb pull /system/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libcamera_client.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libmm-adspsvc.so ../../../vendor/htc/$DEVICE/proprietary
@@ -49,7 +48,7 @@ adb pull /system/lib/hw/sensors.desirec.so ../../../vendor/htc/$DEVICE/proprieta
 
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/device_$DEVICE-vendor-blobs.mk
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -68,8 +67,7 @@ chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
 PRODUCT_COPY_FILES := \\
     vendor/htc/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamera_client.so:obj/lib/libcamera_client.so
+    vendor/htc/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so
 
 PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/akmd:system/bin/akmd \\
@@ -87,7 +85,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
     vendor/htc/__DEVICE__/proprietary/libcamera.so:system/lib/libcamera.so \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamera_client.so:system/lib/libcamera_client.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
@@ -97,9 +94,8 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \\
-    vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so \\
+    vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so
     vendor/htc/__DEVICE__/proprietary/sensors.desirec.so:system/lib/hw/sensors.desirec.so
-
 
 EOF
 

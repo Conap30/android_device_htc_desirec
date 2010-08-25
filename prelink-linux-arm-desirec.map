@@ -89,7 +89,7 @@ libskiagl.so            0xA9C00000 # [~1M]
 libFLAC.so              0xA9B00000 # [???]
 libaudiopolicy.so       0xA9A00000 # [~1M]
 libaudiopolicygeneric.so 0xA9900000 # [???]
-libsoundpool.so         0xA9800000 # [~1M]
+libcamera.so		0xA9800000 # [~1M] 
 libgps.so               0xA9700000 # [~1M] (moved for hero)
 libspeech.so            0xA9600000 # [~1M] (moved for hero)
 liboemcamera.so		0xA9400000 # [~2M] 
@@ -113,7 +113,7 @@ libapp_process.so       0xA7D00000 # [???]
 libsystem_server.so     0xA7C00000 # [~1M]
 libime.so               0xA7B00000 # [???]
 libaudio.so             0xA7A00000 # [~1M] (moved for hero)
-libcamera.so		0xA7900000 # [~1M] 
+libsoundpool.so         0xA7900000 # [~1M]
 libsonivox.so		0xA7800000 # [~1M] (moved for hero)
 libvorbisidec.so        0xA7700000 # [~1M] (moved for hero)
 libdiskconfig.so        0xA7600000 # [<64K]
