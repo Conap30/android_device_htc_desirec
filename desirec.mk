@@ -80,11 +80,11 @@ PRODUCT_LOCALES += mdpi
 
 PRODUCT_COPY_FILES += \
     device/htc/desirec/vold.fstab:system/etc/vold.fstab \
-    device/htc/desirec/gps.conf:system/etc/gps.conf
+    device/htc/desirec/gps.conf:system/etc/gps.conf \
+    device/htc/desirec/apns-conf.xml:system/etc/apns-conf.xml 
 
 
-
-$(call inherit-product-if-exists, vendor/htc/desirec/heroc-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/desirec/desirec-vendor.mk)
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
