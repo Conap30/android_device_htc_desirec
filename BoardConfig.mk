@@ -34,7 +34,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom
 # ARMv6-compatible processor rev 5 (v6l)
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_VARIANT := armv5te
+TARGET_ARCH_VARIANT := armv6j
 TARGET_BOOTLOADER_BOARD_NAME := desirec
 
 # Wifi related defines
