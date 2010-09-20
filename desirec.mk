@@ -45,7 +45,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.setupwizard.enable_bypass=1 \
 	ro.media.dec.jpeg.memcap=20000000 \
 	dalvik.vm.lockprof.threshold=500 \
-	dalvik.vm.dexopt-flags=m=y
+	dalvik.vm.dexopt-flags=m=y \
+        ro.ril.htcmaskw1.bitmask = 4294967295 \
+        ro.ril.htcmaskw1 = 268449905
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/desirec/overlay
 
@@ -82,6 +84,7 @@ PRODUCT_COPY_FILES += \
     device/htc/desirec/vold.fstab:system/etc/vold.fstab \
     device/htc/desirec/gps.conf:system/etc/gps.conf \
     device/htc/desirec/apns-conf.xml:system/etc/apns-conf.xml 
+
 
 
 $(call inherit-product-if-exists, vendor/htc/desirec/desirec-vendor.mk)
