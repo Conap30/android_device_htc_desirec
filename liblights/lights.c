@@ -151,7 +151,7 @@ static void set_speaker_light_locked (struct light_device_t *dev, struct light_s
 				case LED_WHITE:
 					write_int (AMBER_LED_FILE, 0);
 					write_int (GREEN_LED_FILE, 0);
-					write_int (JOGBALL_FILE, 3);
+					write_int (JOGBALL_FILE, 1);
 					break;
 				case LED_BLANK:
 					write_int (AMBER_LED_FILE, 0);
