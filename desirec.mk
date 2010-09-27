@@ -64,7 +64,8 @@ PRODUCT_COPY_FILES += \
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/htc/desirec/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/desirec/wlan.ko:system/lib/modules/wlan.ko
+    device/htc/desirec/wlan.ko:system/lib/modules/wlan.ko \
+    device/htc/desirec/lights.sh:system/etc/lights.sh
 
 PRODUCT_PACKAGES += \
     librs_jni \
