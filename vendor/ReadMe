@@ -1,0 +1,1 @@
+put files in corresponding folders in source tree AndroidProducts.mk and cyanogen_desirec.mk in the vendor/cyanogen/products folder  and vendorsetup.sh in vendor/cyanogen/  folder.
