@@ -73,7 +73,7 @@ USE_CAMERA_STUB := false
 EOF
 
 mkdir -p ../../../vendor/htc/desirec/overlay/packages/apps/Launcher2/res/layout
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/heroc/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/desirec/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
 
