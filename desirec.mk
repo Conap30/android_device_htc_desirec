@@ -31,6 +31,20 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Used by BusyBox
+KERNEL_MODULES_DIR:=/system/lib/modules
+
+# Tiny toolbox
+TINY_TOOLBOX:=true
+
+# Enable Windows Media if supported by the board
+WITH_WINDOWS_MEDIA:=true
+
+PRODUCT_PACKAGES += \
+    DSPManager \
+    FileManager \
+    Superuser
+
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
@@ -89,7 +103,8 @@ PRODUCT_COPY_FILES += \
     device/htc/desirec/gps.conf:system/etc/gps.conf \
     device/htc/desirec/apns-conf.xml:system/etc/apns-conf.xml 
 
-
+# Common CM overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/common
 
 $(call inherit-product-if-exists, vendor/htc/desirec/desirec-vendor.mk)
 
@@ -97,7 +112,12 @@ $(call inherit-product-if-exists, vendor/htc/desirec/desirec-vendor.mk)
 $(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full.mk)
-
+    PRODUCT_PROPERTY_OVERRIDES += \
+           ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-Froyo-Desirec
 
 PRODUCT_NAME := generic_desirec
+PRODUCT_BRAND := verizon
 PRODUCT_DEVICE := desirec
+PRODUCT_MODEL := ERIS
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=FRF91 PRODUCT_NAME=passion BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2/FRF91/43546:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="desirec-user 2.2 FRF91 43546 release-keys"
