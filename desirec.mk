@@ -81,7 +81,11 @@ PRODUCT_COPY_FILES += \
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/htc/desirec/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/desirec/wlan.ko:system/lib/modules/wlan.ko \
+    device/htc/desirec/modules/wlan.ko:system/lib/modules/wlan.ko \
+    device/htc/desirec/modules/loop.ko:system/lib/modules/loop.ko \
+    device/htc/desirec/modules/cryptoloop.ko:system/lib/modules/cryptoloop.ko \
+    device/htc/desirec/modules/tun.ko:system/lib/modules/tun.ko \
+    device/htc/desirec/modules/hid-dummy.ko:system/lib/modules/hid-dummy.ko \
     device/htc/desirec/lights.sh:system/xbin/lights.sh
 
 PRODUCT_PACKAGES += \
@@ -112,8 +116,7 @@ $(call inherit-product-if-exists, vendor/htc/desirec/desirec-vendor.mk)
 $(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full.mk)
-    PRODUCT_PROPERTY_OVERRIDES += \
-           ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-Froyo-Desirec
+
 
 PRODUCT_NAME := generic_desirec
 PRODUCT_BRAND := verizon
