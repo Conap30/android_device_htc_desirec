@@ -81,7 +81,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x01920000
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_heroc librecovery_ui_generic
+TARGET_RECOVERY_UI_LIB := librecovery_ui_desirec librecovery_ui_generic
 
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
 
