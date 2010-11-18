@@ -83,7 +83,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_desirec librecovery_ui_generic
 
-TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 

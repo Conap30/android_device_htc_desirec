@@ -37,6 +37,7 @@ adb pull /system/lib/libmm-adspsvc.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxH264Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/libOmxCore.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libomx_wmadec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasfcommon.so ../../../vendor/htc/$DEVICE/proprietary
@@ -90,6 +91,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/htc/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
     vendor/htc/__DEVICE__/proprietary/pvasflocal.cfg:system/etc/pvasflocal.cfg \\
+    vendor/htc/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
     vendor/htc/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
