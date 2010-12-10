@@ -17,8 +17,8 @@
 DEVICE=desirec
 
 mkdir -p ../../../vendor/htc/$DEVICE/proprietary/
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd system/etc/01_qcomm_omx.cfg system/etc/AudioFilter.csv system/etc/AudioPara4.csv system/etc/AudioPreProcess.csv system/lib/hw/sensors.desirec.so system/lib/libspeech.so system/lib/libpvasflocalpbreg.so system/lib/libpvasfcommon.so system/lib/libomx_wmvdec_sharedlibrary.so system/lib/libomx_wmadec_sharedlibrary.so system/etc/pvasflocal.cfg system/etc/firmware/brf6350.bin system/etc/wifi/Fw1251r1c.bin system/lib/egl/libGLES_qcom.so system/lib/libaudioeq.so system/lib/libcamera.so system/lib/libgps.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/liblvmxipc.so system/lib/libmm-adspsvc.so system/lib/liboemcamera.so system/lib/libOmxCore.so system/lib/libOmxH264Dec.so system/lib/libOmxMpeg4Dec.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so system/lib/libstagefrighthw.so -d ../../../vendor/htc/$DEVICE/proprietary
-chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmdsystem/lib/libpvasflocalpb.so
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd system/etc/01_qcomm_omx.cfg system/etc/AudioFilter.csv system/etc/AudioPara4.csv system/etc/AudioPreProcess.csv system/lib/hw/sensors.desirec.so system/lib/libspeech.so system/lib/libpvasflocalpbreg.so system/lib/libpvasfcommon.so system/lib/libomx_wmvdec_sharedlibrary.so system/lib/libomx_wmadec_sharedlibrary.so system/etc/pvasflocal.cfg system/etc/firmware/brf6350.bin system/etc/wifi/Fw1251r1c.bin system/lib/egl/libGLES_qcom.so system/lib/libaudioeq.so system/lib/libcamera.so system/lib/libgps.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/libmm-adspsvc.so system/lib/liboemcamera.so system/lib/libOmxCore.so system/lib/libOmxH264Dec.so system/lib/libOmxMpeg4Dec.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so system/lib/libstagefrighthw.so -d ../../../vendor/htc/$DEVICE/proprietary
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/device_$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -55,7 +55,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libgps.so:system/lib/libgps.so \\
     vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
-    vendor/htc/__DEVICE__/proprietary/liblvmxipc.so:system/lib/liblvmxipc.so \\
     vendor/htc/__DEVICE__/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
